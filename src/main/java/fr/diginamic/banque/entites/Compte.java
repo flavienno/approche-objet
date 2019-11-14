@@ -24,5 +24,8 @@ public class Compte {
 		this.soldeDuCompte = soldeDuCompte;
 	}
 
-	
+	public String toString(){
+		return getNumeroDeCompte()+"  "+ getSoldeDuCompte();
+		
+	}
 }
