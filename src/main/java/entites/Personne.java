@@ -46,4 +46,13 @@ public class Personne {
 	public String retourneAdresse (){
 		return adresse_postale;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Nom de la personne : " + nom + ", prenom de la personne : " + prenom;
+	}
+	
 }

@@ -10,5 +10,4 @@ public class ConversionNombre {
 		System.out.println(Math.max(b, c));      
 
 	}
-
 }
