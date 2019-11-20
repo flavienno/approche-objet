@@ -38,7 +38,7 @@ public class Compte {
 			return false;
 		}
 		Compte other = (Compte) obj;
-		return new EqualsBuilder().append(numeroDeCompte, other.getNumeroDeCompte()).isEquals();
+		return new EqualsBuilder().append(numeroDeCompte, other.getNumeroDeCompte()).append(soldeDuCompte,other.getSoldeDuCompte()).isEquals();
 
 	}
 }
