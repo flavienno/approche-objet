@@ -21,9 +21,20 @@ public class Pays {
 	 * @param nbHab
 	 * @param pibHab
 	 */
+		
 	public Pays(String nom, double nbHab, int pibHab) {
 		super();
 		this.nom = nom;
+		this.nbHab = nbHab;
+		this.pibHab = pibHab;
+	}
+
+	/**
+	 * @param nbHab
+	 * @param pibHab
+	 */
+	public Pays(double nbHab, int pibHab) {
+		super();
 		this.nbHab = nbHab;
 		this.pibHab = pibHab;
 	}
@@ -84,12 +95,12 @@ public class Pays {
 	}
 
 	public static void main(String[] args) {
-		// Créez une classe Pays possédant 3 attributs : nom, nb d’habitants,
+		// Crï¿½ez une classe Pays possï¿½dant 3 attributs : nom, nb dï¿½habitants,
 		// PIB/habitant.
 
-		// • Créez un HashSet de pays contenant les pays suivants avec les
+		// ï¿½ Crï¿½ez un HashSet de pays contenant les pays suivants avec les
 		// informations correctes
-		// de nombre d’habitants et de PIB/Hab:
+		// de nombre dï¿½habitants et de PIB/Hab:
 		Set<Pays> set = new HashSet<>();
 		Pays p1 = new Pays("USA", 331883986, 62641);
 		set.add(p1);
@@ -140,8 +151,8 @@ public class Pays {
 		// Supprimez le pays dont le PIB total est le plus petit
 		set.remove(min);
 
-		// Affichez l’ensemble des pays ainsi modifiés avec leur nom, nombre
-		// d’habitants et PIB tota
+		// Affichez lï¿½ensemble des pays ainsi modifiï¿½s avec leur nom, nombre
+		// dï¿½habitants et PIB tota
 		System.out.println(set);
 	}
 

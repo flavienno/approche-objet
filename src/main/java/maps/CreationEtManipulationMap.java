@@ -17,26 +17,26 @@ public class CreationEtManipulationMap {
 		mapVilles.put(69, "Lyon");
 		mapVilles.put(33, "Bordeaux");
 		
-		//Mettre en place une boucle pour afficher l'ensemble des clés contenues dans la map
+		//Mettre en place une boucle pour afficher l'ensemble des clï¿½s contenues dans la map
 		Iterator<Integer> keysIte = mapVilles.keySet().iterator();
 		while (keysIte.hasNext()) {
 		Integer iterator = keysIte.next();
 		System.out.println(iterator);
 		
 		//Mettre en place une boucle pour afficher l'ensemble des valeurs contenues dans la map
-			// 1 ere méthode		
+			// 1 ere mï¿½thode		
 		
-//		Set<Integer> keyset = mapVilles.keySet();
-//		for (Integer key: keyset){
-//			System.out.println("Clé"+ key);
-//			System.out.println("Valeur :"+ mapVilles.get(key));
+		Set<Integer> keyset = mapVilles.keySet();
+		for (Integer key: keyset){
+			System.out.println("Clï¿½"+ key);
+			System.out.println("Valeur :"+ mapVilles.get(key));
 		}
 		
-		// 2 eme  méthode
+		// 2 eme  mï¿½thode
 		Iterator<Integer> keySet = mapVilles.keySet().iterator();
 		while (keySet.hasNext()) {
 		Integer key = keySet.next();
-		System.out.println("Clé :"+ key);
+		System.out.println("Clï¿½ :"+ key);
 		System.out.println("Valeur :"+ mapVilles.get(key));
 		
 		}
@@ -45,4 +45,5 @@ public class CreationEtManipulationMap {
 
 	}
 
+}
 }

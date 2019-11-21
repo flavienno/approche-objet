@@ -1,13 +1,12 @@
 package fr.diginamic.recensement;
 
-
 public class Ville {
 
-	/** codeRegion : code de la région */
+	/** codeRegion : code de la rï¿½gion */
 	private String codeRegion;
-	/** nomRegion : nom de la région */
+	/** nomRegion : nom de la rï¿½gion */
 	private String nomRegion;
-	/** codeDepartement : code du département */
+	/** codeDepartement : code du dï¿½partement */
 	private String codeDepartement;
 	/** code INSEE de la ville */
 	private String codeCommune;
@@ -20,11 +19,11 @@ public class Ville {
 	 * Constructeur
 	 * 
 	 * @param codeRegion
-	 *            code de la région
+	 *            code de la rï¿½gion
 	 * @param nomRegion
-	 *            nom de la région
+	 *            nom de la rï¿½gion
 	 * @param codeDepartement
-	 *            code du département
+	 *            code du dï¿½partement
 	 * @param codeCommune
 	 *            code INSEE de la ville
 	 * @param nom
@@ -157,7 +156,9 @@ public class Ville {
 		this.populationTotale = populationTotale;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override

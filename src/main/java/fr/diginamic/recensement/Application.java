@@ -22,7 +22,7 @@ public class Application {
 	 */
 	public static void main(String[] args) {
 
-		// On créé la liste des villes
+		// On crï¿½ï¿½ la liste des villes
 		List<Ville> villes = new ArrayList<Ville>();
 
 		List<String> lignes = null;
@@ -31,7 +31,7 @@ public class Application {
 			File file = new File("D:/recensement population 2016.csv");
 			lignes = FileUtils.readLines(file, "UTF-8");
 
-			// On supprime la ligne d'entéte avec les noms des colonnes
+			// On supprime la ligne d'entï¿½te avec les noms des colonnes
 			lignes.remove(0);
 
 			for (String ligne : lignes) {
@@ -43,11 +43,11 @@ public class Application {
 				String nomCommune = morceaux[5];
 				int populationTotale = Integer.parseInt(morceaux[6].replace(" ", "").trim());
 
-				// On cree maintenant la ville avec toutes ses données
+				// On cree maintenant la ville avec toutes ses donnï¿½es
 				Ville ville = new Ville(codeRegion, nomRegion, codeDepartement, codeCommune, nomCommune,
 						populationTotale);
 
-				// On ajoute la ville à la liste des villes
+				// On ajoute la ville ï¿½ la liste des villes
 				villes.add(ville);
 			}
 			// System.out.println("Nombre de lignes :" + lignes.size());
@@ -65,7 +65,7 @@ public class Application {
 			}
 
 		}
-		// Recherche et affichage de la population de l'Hérault
+		// Recherche et affichage de la population de l'Hï¿½rault
 		int popDept = 0;
 		for (int i = 0; i < villes.size(); i++) {
 			Ville v = villes.get(i);
@@ -73,9 +73,9 @@ public class Application {
 				popDept += v.getPopulation();
 			}
 		}
-		System.out.println("Population de l'Hérault :" + popDept);
+		System.out.println("Population de l'Hï¿½rault :" + popDept);
 
-		// Recherche et affichage de la plus petite ville de l'Hérault
+		// Recherche et affichage de la plus petite ville de l'Hï¿½rault
 		int popMin = Integer.MAX_VALUE;
 		Ville villeMin = null;
 		for (int i = 0; i < villes.size(); i++) {
@@ -85,31 +85,32 @@ public class Application {
 				villeMin = v;
 			}
 		}
-		System.out.println("Plus petite ville du département :" + villeMin);
-		// Alimentation d'une liste ne contenant que les villes du département 34
-				List<Ville> villesDept = new ArrayList<>();
-				for (int i=0; i<villes.size(); i++){
-					Ville v = villes.get(i);
-					if (v.getCodeDepartement().equals("34")){
-						villesDept.add(v);
-					}
-				}
-				
-				// Afficher les 10 plus grandes villes du département
-				System.out.println("---------------------------------------------------");
-				System.out.println("Affichage des 10 plus grandes villes du département");
-				Collections.sort(villesDept, new PlusGrandeVilleComparator());
-				for (int i=0; i<10; i++){
-					System.out.println(villesDept.get(i));
-				}
-				
-				// Afficher les 10 plus petites villes du département
-				System.out.println("----------------------------------------------------");
-				System.out.println("Affichage des 10 plus grandes petites du département");
-				Collections.sort(villesDept, new PlusPetiteVilleComparator());
-				for (int i=0; i<10; i++){
-					System.out.println(villesDept.get(i));
-				}
+		System.out.println("Plus petite ville du dï¿½partement :" + villeMin);
+		// Alimentation d'une liste ne contenant que les villes du dï¿½partement
+		// 34
+		List<Ville> villesDept = new ArrayList<>();
+		for (int i = 0; i < villes.size(); i++) {
+			Ville v = villes.get(i);
+			if (v.getCodeDepartement().equals("34")) {
+				villesDept.add(v);
+			}
+		}
+
+		// Afficher les 10 plus grandes villes du dï¿½partement
+		System.out.println("---------------------------------------------------");
+		System.out.println("Affichage des 10 plus grandes villes du dï¿½partement");
+		Collections.sort(villesDept, new PlusGrandeVilleComparator());
+		for (int i = 0; i < 10; i++) {
+			System.out.println(villesDept.get(i));
+		}
+
+		// Afficher les 10 plus petites villes du dï¿½partement
+		System.out.println("----------------------------------------------------");
+		System.out.println("Affichage des 10 plus grandes petites du dï¿½partement");
+		Collections.sort(villesDept, new PlusPetiteVilleComparator());
+		for (int i = 0; i < 10; i++) {
+			System.out.println(villesDept.get(i));
+		}
 
 	}
 }
