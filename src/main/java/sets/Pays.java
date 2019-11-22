@@ -10,7 +10,7 @@ import java.util.Set;
  * @author fla
  *
  */
-public class Pays {
+public class Pays  {
 
 	private String nom;
 	private double nbHab;
@@ -21,7 +21,7 @@ public class Pays {
 	 * @param nbHab
 	 * @param pibHab
 	 */
-		
+
 	public Pays(String nom, double nbHab, int pibHab) {
 		super();
 		this.nom = nom;
@@ -154,6 +154,12 @@ public class Pays {
 		// Affichez l�ensemble des pays ainsi modifi�s avec leur nom, nombre
 		// d�habitants et PIB tota
 		System.out.println(set);
+		
+		
 	}
-
+ 
+	public int compareTo(Pays pays2) {
+		int result = this.nom.compareTo(pays2.getNom());
+		return result;
+	}
 }

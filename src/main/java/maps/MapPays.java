@@ -21,7 +21,7 @@ public class MapPays {
 
 	public static void main(String[] args) {
 		// creez une map permettant de stocker les instances de pays (valeur)en
-		// fonction de leur nom (cl�)
+		// fonction de leur nom (clé)
 		Map<String, Pays> mapPays = new HashMap<>();
 		mapPays.put("USA", new Pays(331883986, 62641));
 		mapPays.put("France", new Pays(66992699, 41464));
